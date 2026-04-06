@@ -22,9 +22,9 @@ VALUES
 select * from orders
 
 --Q9:Find total revenue from non-cancelled orders
-select Sum(order_amount) as total_revenue_of_non_cancelled_orders
+select Sum(order_amount) as total_revenue
 from orders
-where order_status IN ('DELIVERED', 'PENDING');
+where order_status NOT IN ('CANCELLED');
 
 --Q10:Find number of orders and total revenue for customers whose total spending is more than 1500.
 select customer_id, count(order_id) as total_orders, sum(order_amount) as total_revenue 
@@ -42,7 +42,7 @@ WHERE customer_id IN ( select customer_id
 					   having count(order_id) >= 2 );
 
 --Q12:Find customers whose DELIVERED orders total amount is more than 1000.
-select customer_id 
+select customer_id, sum(order_amount) 
 from orders
 where order_status = 'DELIVERED'
 group by customer_id
