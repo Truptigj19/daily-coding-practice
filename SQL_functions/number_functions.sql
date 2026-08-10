@@ -1,0 +1,90 @@
+--SQL FUNCTION
+
+use zomatodb
+select*from zomato
+
+--NUmber FUNCTION
+
+--1)ABS
+SELECT Abs(-243.5) AS AbsNum;
+
+--2)ACOS
+SELECT ACOS(0.25);
+
+--3)ASIN
+SELECT ASIN(0.25);
+
+--4)ATAN
+SELECT ATAN(2.5);
+
+--5)ATN2
+SELECT ATN2(0.50, 1);
+
+--6)AVG
+SELECT AVG(votes) AS AveragePrice FROM zomato;
+
+--7)CEILING
+SELECT CEILING(25.75) AS CeilValue;
+
+--8)COUNT
+SELECT COUNT(name) AS NumberOfProducts FROM zomato;
+
+--9)COS
+SELECT COS(2);
+
+--10)COT
+SELECT COT(6);
+
+--11)DEGREES
+SELECT DEGREES(1.5);
+
+--12)EXP
+SELECT EXP(1);
+
+--13)FLOOR
+SELECT FLOOR(25.75) AS FloorValue;
+
+--14)LOG
+SELECT LOG(2);
+
+--15)LOG10
+SELECT LOG10(2);
+
+--16)MAX
+SELECT MAX(votes) AS LargestPrice FROM zomato;
+
+--17)MIN
+SELECT MIN(votes) AS LargestPrice FROM zomato;
+
+--18)PI
+SELECT PI();
+
+--19)POWER
+SELECT POWER(4, 2);
+
+--20)RADIANS
+SELECT RADIANS(180);
+
+--21)RAND
+SELECT RAND();
+
+--22)ROUND
+SELECT ROUND(235.415, 2) AS RoundValue;
+
+--23)SIGN
+SELECT SIGN(255.5);
+
+--24)SIN
+SELECT SIN(2);
+
+--25)SQRT
+SELECT SQRT(64);
+
+--26)SQUARE
+SELECT SQUARE(64);
+
+--27)
+SELECT SUM(votes) AS Totalvotes FROM zomato;
+
+--28)TAN
+SELECT TAN(1.75);
